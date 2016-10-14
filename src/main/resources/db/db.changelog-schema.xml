@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="1" author="sleon">
+        <comment>Info student_table</comment>
+        <createTable tableName="student">
+            <column name="id" type="varchar(255)"/>
+            <column name="type" type="varchar(255)"/>
+            <column name="state" type="varchar(255)"/>
+            <column name="students_info" type="text"/>
+        </createTable>
+        <addPrimaryKey
+                columnNames="id,type"
+                constraintName="pk_students_table"
+                tableName="students"/>
+    </changeSet>
+
+
+</databaseChangeLog>
